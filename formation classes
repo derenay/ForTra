@@ -1,0 +1,85 @@
+1️⃣ Tank Formasyonları (Tanks)
+
+    Line → Tank – Tank – Tank
+
+    Wedge → Tank – Tank – Tank
+
+    Vee → Tank – Tank – Tank
+
+    Echelon Left → Tank – Tank – Tank
+
+    Echelon Right → Tank – Tank – Tank
+
+    Column → Tank – Tank – Tank – Tank
+
+    Staggered Column → Tank – Tank – Tank – Tank
+
+    Herringbone → Tank – Tank – Tank – Tank
+
+2️⃣ Piyade Formasyonları (Infantry - Only APC or IFV)
+
+    Squad Column → IFV – IFV – IFV
+
+    Diamond Formation → IFV – IFV – IFV – IFV
+
+    Ranger File → APC – APC – APC
+
+    Staggered File → APC – APC – APC
+
+    Line Formation → APC – APC – APC
+
+3️⃣ Jet Formasyonları (Fighter or Bomber Jets)
+
+    Finger Four → Jet – Jet – Jet – Jet
+
+    Line Abreast → Jet – Jet – Jet
+
+    Wedge → Jet – Jet – Jet
+
+    Echelon Left → Jet – Jet – Jet
+
+    Echelon Right → Jet – Jet – Jet
+
+    Vic Formation → Jet – Jet – Jet
+
+    Trail Formation → Jet – Jet – Jet
+
+4️⃣ Helikopter Formasyonları (Attack or Transport Helicopters)
+
+    Staggered Trail → Helicopter – Helicopter – Helicopter
+
+    Diamond Formation → Helicopter – Helicopter – Helicopter – Helicopter
+
+    Column Formation → Helicopter – Helicopter – Helicopter
+
+    Echelon Left → Helicopter – Helicopter – Helicopter
+
+    Echelon Right → Helicopter – Helicopter – Helicopter
+
+    V Formation → Helicopter – Helicopter – Helicopter
+
+5️⃣ İHA Formasyonları (Drones)
+
+    Swarm Formation → Drone – Drone – Drone – Drone
+
+    Grid Formation → Drone – Drone – Drone
+
+    Line Formation → Drone – Drone – Drone
+
+6️⃣ Savaş Gemisi Formasyonları (Warships)
+
+    Line Abreast → Destroyer – Destroyer – Destroyer
+
+    Echelon → Destroyer – Destroyer – Destroyer
+
+    Column Formation → Cruiser – Cruiser – Cruiser
+
+    Staggered Column → Frigate – Frigate – Frigate
+
+7️⃣ Denizaltı Formasyonları (Submarines)
+
+    Wolfpack Formation → Submarine – Submarine – Submarine
+
+    Trail Formation → Submarine – Submarine – Submarine
+
+    Line Abreast → Submarine – Submarine – Submarine
