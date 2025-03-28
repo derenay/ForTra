@@ -40,8 +40,8 @@ model = HierarchicalFormationTransformer(
 
 
 
-# #model yüklenir
-# load_model(path, model)
+#model yüklenir
+load_model(path, model)
 
 # Cihaz ayarı: GPU varsa GPU, yoksa CPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

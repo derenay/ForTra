@@ -38,9 +38,9 @@ class FormationDataset(Dataset):
         # Koordinatlar: [[x, y], ...] → float tensora çevriliyor
         coords = torch.tensor(sample['coordinates'], dtype=torch.float)
         # Sınıf bilgileri: Her nesne için string değer, embedding için index'e dönüştürülüyor
-        classes = torch.tensor([self.class2idx[c] for c in sample['classes']], dtype=torch.long)
+        classes = torch.tensor(sample['classes'], dtype=torch.long)
         # Formasyon etiketi: Sınıflandırma hedefi
-        formation_label = torch.tensor(self.formation2idx[sample['formation']], dtype=torch.long)
+        formation_label = torch.tensor(sample['formation'], dtype=torch.long)
         return coords, classes, formation_label
 
 def collate_fn(batch):
