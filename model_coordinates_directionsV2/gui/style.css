@@ -1,0 +1,205 @@
+/* static/style.css */
+
+/* Genel Stil Ayarları */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #ffffff; /* Daha açık bir arka plan */
+    color: #343a40; /* Daha koyu metin rengi */
+    margin: 0; /* Tarayıcı varsayılan margin'ini sıfırla */
+    padding: 2rem; /* Sayfa kenarlarında boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçeriği yatayda ortala */
+    min-height: 100vh; /* Sayfanın en az ekran yüksekliği kadar olmasını sağla */
+    line-height: 1.6; /* Satır yüksekliğini artırarak okunabilirliği iyileştir */
+}
+
+/* Ana içerik sarmalayıcısı */
+.container {
+    width: 100%;
+    max-width: 1200px; /* İçerik için maksimum genişlik */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Ana bölümler arası boşluk */
+}
+
+h1, h2 {
+    color: #212529;
+    text-align: center;
+    margin-bottom: 1rem; /* Başlık altı boşluk */
+}
+
+/* Kontrol Bölümü */
+.controls {
+    background-color: #ffffff; /* Kart görünümü için beyaz arka plan */
+    padding: 1.5rem;
+    border-radius: 8px; /* Daha yumuşak köşeler */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* İnce bir gölge */
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçsin */
+    gap: 1rem; /* Elemanlar arası boşluk */
+    align-items: center;
+    justify-content: center; /* Ortaya hizala */
+}
+
+.controls label {
+    font-weight: 600; /* Biraz daha kalın */
+    margin-right: 0.5rem;
+}
+
+.controls select,
+.controls button {
+    padding: 0.75rem 1.25rem; /* Daha rahat tıklama alanı */
+    border: 1px solid #ced4da; /* İnce kenarlık */
+    border-radius: 6px; /* Tutarlı köşe yuvarlama */
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Yumuşak geçişler */
+}
+
+.controls select {
+    background-color: #fff;
+    flex-grow: 1; /* Mevcut alanı doldurmaya çalışsın */
+    min-width: 150px; /* Minimum genişlik */
+}
+
+.controls button {
+    border: none; /* Kenarlığı kaldır */
+    color: white;
+    font-weight: 500;
+}
+
+/* Farklı Buton Renkleri */
+#saveFormation { background-color: #007bff; }
+#saveFormation:hover { background-color: #0056b3; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); }
+
+#clearCurrent { background-color: #dc3545; }
+#clearCurrent:hover { background-color: #c82333; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2); }
+
+#exportJson { background-color: #28a745; }
+#exportJson:hover { background-color: #218838; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2); }
+
+/* Canvas ve Bilgi Alanı */
+.canvas-container {
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta gelsin */
+    gap: 1.5rem; /* Canvas ile bilgi alanı arası boşluk */
+    width: 100%;
+    justify-content: center; /* İçeriği ortala */
+    align-items: flex-start; /* Üstten hizala */
+}
+
+#formationCanvas {
+    border: 1px solid #dee2e6; /* Daha ince kenarlık */
+    cursor: crosshair;
+    background-color: #fff; /* Beyaz arka plan */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03); /* Çok hafif gölge */
+    border-radius: 6px;
+    max-width: 100%; /* Ekran küçülünce taşmasın */
+    height: auto; /* Oranı koru */
+}
+
+#infoArea {
+    border: 1px solid #e9ecef; /* Daha açık kenarlık */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    min-width: 250px; /* Minimum genişlik */
+    max-width: 350px; /* Maksimum genişlik */
+    height: fit-content; /* İçeriğe göre yükseklik */
+    flex-grow: 1; /* Esneklik */
+}
+
+#infoArea h3, #infoArea h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #495057;
+    border-bottom: 1px solid #eee; /* Başlıkları ayır */
+    padding-bottom: 0.5rem;
+}
+
+#infoArea ul {
+    padding-left: 1.2rem; /* Liste girintisi */
+    margin-bottom: 0.5rem;
+}
+
+#infoArea li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+#infoArea p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Kaydedilmiş Formasyonlar Bölümü */
+.saved-formations {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Konteyner genişliğine uy */
+}
+
+.saved-formations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.saved-formations li {
+    background-color: transparent; /* Arka planı kaldır */
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e9ecef; /* İnce kenarlık */
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between; /* İçerikleri yay */
+    align-items: center; /* Dikeyde ortala */
+    gap: 1rem; /* İç elemanlar arası boşluk */
+    transition: background-color 0.2s ease;
+}
+.saved-formations li:hover {
+    background-color: #f8f9fa; /* Üzerine gelince hafif renk */
+}
+
+.saved-formations li span:first-child {
+    flex-grow: 1; /* İsim alanı genişlesin */
+    font-weight: 500;
+}
+
+.saved-formations .test-button {
+    padding: 0.4rem 0.8rem; /* Daha küçük test butonu */
+    font-size: 0.85rem;
+    background-color: #6c757d; /* İkincil renk */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Buton küçülmesin */
+}
+
+.saved-formations .test-button:hover {
+    background-color: #5a6268;
+}
+
+.saved-formations .test-button:disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.saved-formations .prediction-result {
+    font-size: 0.85rem;
+    font-style: italic;
+    min-width: 100px; /* Sonuç alanı için minimum yer */
+    text-align: right; /* Sağa yaslı */
+    flex-shrink: 0;
+}
+
+/* Yardımcı stiller (JS tarafından kullanılır) */
+.prediction-result[style*="color: orange"] { color: #fd7e14 !important; }
+.prediction-result[style*="color: green"] { color: #28a745 !important; }
+.prediction-result[style*="color: red"] { color: #dc3545 !important; }
