@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Formasyon Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Manuel Tank Formasyon Oluşturucu</h1>
+
+    <div class="controls">
+        <label for="formationName">Formasyon Adı:</label>
+        <select id="formationName">
+            <option value="" disabled selected>Formasyon Seçin...</option>
+            </select>
+        <button id="saveFormation">Mevcut Formasyonu Kaydet</button>
+        <button id="clearCurrent">Mevcut Tankları Temizle</button>
+        <button id="exportJson">Tüm Formasyonları JSON İndir</button>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="formationCanvas" width="600" height="600"></canvas>
+        <div id="infoArea">
+            <p>Canvas'a tıklayarak tank yerleştirin. İkinci tıklama ile yönünü belirleyin.</p>
+        </div>
+    </div>
+
+    <div class="saved-formations">
+        <h2>Kaydedilmiş Formasyonlar:</h2>
+        <ul id="savedList">
+            </ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
