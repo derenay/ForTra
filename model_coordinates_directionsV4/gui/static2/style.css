@@ -1,0 +1,314 @@
+/* static/style.css */
+
+/* Genel Stil Ayarları */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --success-color: #28a745;
+    --success-hover: #218838;
+    --secondary-color: #6c757d;
+    --secondary-hover: #5a6268;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #ced4da;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --border-radius-sm: 0.25rem; /* 4px */
+    --border-radius-md: 0.5rem;  /* 8px */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1, h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0; /* Gap ile ayarlanacak */
+}
+h2 {
+    margin-bottom: 1rem; /* Liste öncesi boşluk */
+}
+
+/* Kart Stili */
+.card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--medium-gray);
+}
+
+/* Kontrol Bölümü */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    white-space: nowrap; /* Etiket bölünmesin */
+}
+
+.controls select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    background-color: var(--white);
+    flex-grow: 1;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+/* Genel Buton Stili */
+.btn {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: var(--white);
+    display: inline-flex; /* İkonlarla hizalama için */
+    align-items: center;
+    gap: 0.5rem; /* İkon ve metin arası boşluk */
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Özel Buton Renkleri */
+.btn-primary { background-color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-danger { background-color: var(--danger-color); }
+.btn-danger:hover { background-color: var(--danger-hover); }
+
+.btn-success { background-color: var(--success-color); }
+.btn-success:hover { background-color: var(--success-hover); }
+
+.btn-secondary { background-color: var(--secondary-color); color: var(--white); }
+.btn-secondary:hover { background-color: var(--secondary-hover); }
+
+
+/* Ana İçerik Alanı (Canvas ve Bilgi) */
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta */
+    gap: 1.5rem;
+    align-items: flex-start; /* Üstten hizala */
+}
+
+.canvas-container {
+    padding: 0.5rem; /* Canvas etrafında biraz boşluk */
+    display: flex; /* Canvas'ı ortalamak için */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Mümkünse büyüsün */
+}
+
+#formationCanvas {
+    border: 1px solid var(--medium-gray);
+    cursor: crosshair;
+    background-color: #fff; /* Beyaz arka plan */
+    /* background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px); */
+    /* background-size: 20px 20px;  İsteğe bağlı grid arka planı */
+    display: block; /* İç boşlukları kaldırmak için */
+    max-width: 100%; /* Konteynerden taşmasın */
+    height: auto; /* Oranı koru */
+    border-radius: var(--border-radius-sm);
+}
+
+#infoArea {
+    min-width: 280px;
+    max-width: 400px;
+    flex-basis: 300px; /* Başlangıç genişliği */
+    flex-grow: 1;
+    height: fit-content; /* İçeriğe göre yükseklik */
+}
+
+#infoArea h3, #infoArea h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+#infoArea h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+#infoArea ul {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    list-style: none; /* Madde işaretlerini kaldır */
+}
+
+#infoArea li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--medium-gray); /* Öğeler arası ayraç */
+}
+#infoArea li:last-child {
+    border-bottom: none;
+}
+
+
+#infoArea p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+#infoArea p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Kaydedilmiş Formasyonlar Bölümü */
+.saved-formations h2 {
+    text-align: left; /* Başlık sola yaslı */
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 0.5rem;
+}
+
+.saved-formations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px; /* Çok fazla formasyon olursa scroll */
+    overflow-y: auto; /* Dikey scroll */
+}
+
+.saved-formations li {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.saved-formations li:hover {
+    background-color: var(--light-gray);
+    border-color: var(--dark-gray);
+}
+/* Son elemanın alt boşluğunu kaldır */
+.saved-formations li:last-child {
+    margin-bottom: 0;
+}
+
+.saved-formations li span:first-child {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.saved-formations .test-button {
+    padding: 0.4rem 0.8rem; /* Daha küçük test butonu */
+    font-size: 0.85rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Buton küçülmesin */
+    white-space: nowrap; /* "Test Et" bölünmesin */
+}
+.saved-formations .test-button:hover {
+    background-color: var(--secondary-hover);
+    transform: none; /* Liste içinde zıplamasın */
+    box-shadow: none;
+}
+.saved-formations .test-button:disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.saved-formations .prediction-result {
+    font-size: 0.85rem;
+    font-style: italic;
+    min-width: 120px; /* Sonuç alanı için minimum yer */
+    text-align: right;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+/* Yardımcı stiller (JS tarafından kullanılır) */
+.status-pending i { color: orange !important; }
+.status-complete i { color: green !important; }
+
+.prediction-result.status-testing { color: orange !important; }
+.prediction-result.status-success { color: var(--success-color) !important; }
+.prediction-result.status-error { color: var(--danger-color) !important; }
+
+
+/* Küçük ekranlar için (isteğe bağlı) */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        gap: 1rem;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch; /* Kontroller tam genişlik kaplasın */
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: stretch; /* Canvas ve info tam genişlik */
+    }
+    #infoArea {
+        max-width: none; /* Genişlik limitini kaldır */
+        min-width: auto;
+    }
+    .saved-formations li {
+        flex-direction: column;
+        align-items: flex-start; /* Liste öğeleri alt alta */
+    }
+    .saved-formations .test-button {
+        align-self: flex-end; /* Buton sağa yaslı */
+    }
+    .saved-formations .prediction-result {
+        text-align: left; /* Sonuç sola yaslı */
+        min-width: auto;
+        margin-top: 0.5rem;
+    }
+}

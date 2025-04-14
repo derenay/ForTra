@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tank Formasyon Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <h1>Modern Tank Formasyon Oluşturucu</h1>
+
+        <div class="controls card">
+            <label for="formationName">Formasyon Adı:</label>
+            <select id="formationName">
+                <option value="" disabled selected>Formasyon Seçin...</option>
+            </select>
+            <button id="saveFormation" class="btn btn-primary">
+                <i class="fas fa-save"></i>
+                 Mevcut Formasyonu Kaydet
+            </button>
+            <button id="clearCurrent" class="btn btn-danger">
+                 <i class="fas fa-trash"></i>
+                 Mevcut Tankları Temizle
+            </button>
+            <button id="exportJson" class="btn btn-success">
+                <i class="fas fa-download"></i>
+                 Tüm Formasyonları JSON İndir
+            </button>
+        </div>
+
+        <div class="main-content">
+            <div class="canvas-container card">
+                 <canvas id="formationCanvas" width="600" height="600"></canvas>
+            </div>
+            <div id="infoArea" class="card">
+                <h3>Durum</h3>
+                <p>Canvas'a tıklayarak tank yerleştirin. İkinci tıklama ile yönünü belirleyin.</p>
+            </div>
+        </div>
+
+
+        <div class="saved-formations card">
+            <h2>Kaydedilmiş Formasyonlar</h2>
+            <ul id="savedList">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
