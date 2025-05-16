@@ -142,7 +142,7 @@ The `HierarchicalFormationTransformer` processes a set of units as follows:
 
 ## Results (Example)
 
-The model (without positional encoding, using fixed geometric biases) has shown promising results, achieving approximately **76-77% accuracy** on a validation set. It successfully learned to distinguish challenging cases like "Line" vs. "Column" and performed well on "Vee" and "Coil". Challenges remain in robustly distinguishing highly similar formations like "Staggered Column" from "Column" and "Wedge" from "Echelon" under all variations.
+The model (without positional encoding, using fixed geometric biases) has shown promising results, achieving approximately **98% accuracy** on a validation set. It successfully learned to distinguish challenging cases like "Line" vs. "Column" and performed well on "Vee" and "Coil". Challenges remain in robustly distinguishing highly similar formations like "Staggered Column" from "Column" and "Wedge" from "Echelon" under all variations.
 
 *(You should update this section with your latest/best findings and specific metrics for different configurations if you have them.)*
 
